@@ -1,0 +1,285 @@
+<!-- Bismillah YBM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>JS methods</title>
+</head>
+<body>
+<script type="text/javascript">
+const startups = [
+{name: "Epicop", platform: "Mobile dev", location: "Chanchalguda",year:95},
+{name: "Sizmic", platform: "Web dev", location: "Hyderabad",year:80},
+{name: "Plugmatter", platform: "Wordpress", location: "Hyderabad",year:70},
+{name: "Mazik Global", platform: "Desktop dev", location: "Bangalore",year:42},
+{name: "Ion Tech", platform: "Hybrid dev", location: "Pune",year:45},
+];
+
+const ages = [33,43,18,16,15,10,25,30,40];
+
+//forloop
+
+// for(let i=0; i< startups.length; i++) {
+// 	console.log(startups[i]);
+// }
+
+//forEach
+
+// const startup = startups.forEach(start => console.log(start));
+
+//filter
+
+// const filteredValue = startups.filter(startup => startup.year > 60 ? console.log(startup) : console.log("Ohh shit!"));
+
+//map
+
+// const mapped = startups.map(function(startup) {
+// 	console.log(`${startup.name} [${startup.location} - ${startup.platform} ]`);
+// })
+
+//sort
+
+// const sorted = ages.sort((a,b) => (a>b ? console.log(a) : console.log(b)));
+
+//reduce
+
+// const ageSum = ages.reduce((total,age) => total+age,0);
+
+// console.log(ageSum);
+
+speaks = [
+  {
+    "name": "Alex",
+    "lang": "en-US"
+  },
+  {
+    "name": "Alice",
+    "lang": "it-IT"
+  },
+  {
+    "name": "Alva",
+    "lang": "sv-SE"
+  },
+  {
+    "name": "Amelie",
+    "lang": "fr-CA"
+  },
+  {
+    "name": "Anna",
+    "lang": "de-DE"
+  },
+  {
+    "name": "Carmit",
+    "lang": "he-IL"
+  },
+  {
+    "name": "Damayanti",
+    "lang": "id-ID"
+  },
+  {
+    "name": "Daniel",
+    "lang": "en-GB"
+  },
+  {
+    "name": "Diego",
+    "lang": "es-AR"
+  },
+  {
+    "name": "Ellen",
+    "lang": "nl-BE"
+  },
+  {
+    "name": "Fiona",
+    "lang": "en"
+  },
+  {
+    "name": "Fred",
+    "lang": "en-US"
+  },
+  {
+    "name": "Ioana",
+    "lang": "ro-RO"
+  },
+  {
+    "name": "Joana",
+    "lang": "pt-PT"
+  },
+  {
+    "name": "Jorge",
+    "lang": "es-ES"
+  },
+  {
+    "name": "Juan",
+    "lang": "es-MX"
+  },
+  {
+    "name": "Kanya",
+    "lang": "th-TH"
+  },
+  {
+    "name": "Karen",
+    "lang": "en-AU"
+  },
+  {
+    "name": "Kyoko",
+    "lang": "ja-JP"
+  },
+  {
+    "name": "Laura",
+    "lang": "sk-SK"
+  },
+  {
+    "name": "Lekha",
+    "lang": "hi-IN"
+  },
+  {
+    "name": "Luca",
+    "lang": "it-IT"
+  },
+  {
+    "name": "Luciana",
+    "lang": "pt-BR"
+  },
+  {
+    "name": "Maged",
+    "lang": "ar-SA"
+  },
+  {
+    "name": "Mariska",
+    "lang": "hu-HU"
+  },
+  {
+    "name": "Mei-Jia",
+    "lang": "zh-TW"
+  },
+  {
+    "name": "Melina",
+    "lang": "el-GR"
+  },
+  {
+    "name": "Milena",
+    "lang": "ru-RU"
+  },
+  {
+    "name": "Moira",
+    "lang": "en-IE"
+  },
+  {
+    "name": "Monica",
+    "lang": "es-ES"
+  },
+  {
+    "name": "Nora",
+    "lang": "nb-NO"
+  },
+  {
+    "name": "Paulina",
+    "lang": "es-MX"
+  },
+  {
+    "name": "Samantha",
+    "lang": "en-US"
+  },
+  {
+    "name": "Sara",
+    "lang": "da-DK"
+  },
+  {
+    "name": "Satu",
+    "lang": "fi-FI"
+  },
+  {
+    "name": "Sin-ji",
+    "lang": "zh-HK"
+  },
+  {
+    "name": "Tessa",
+    "lang": "en-ZA"
+  },
+  {
+    "name": "Thomas",
+    "lang": "fr-FR"
+  },
+  {
+    "name": "Ting-Ting",
+    "lang": "zh-CN"
+  },
+  {
+    "name": "Veena",
+    "lang": "en-IN"
+  },
+  {
+    "name": "Victoria",
+    "lang": "en-US"
+  },
+  {
+    "name": "Xander",
+    "lang": "nl-NL"
+  },
+  {
+    "name": "Yelda",
+    "lang": "tr-TR"
+  },
+  {
+    "name": "Yuna",
+    "lang": "ko-KR"
+  },
+  {
+    "name": "Yuri",
+    "lang": "ru-RU"
+  },
+  {
+    "name": "Zosia",
+    "lang": "pl-PL"
+  },
+  {
+    "name": "Zuzana",
+    "lang": "cs-CZ"
+  }
+];
+
+
+const msg = new SpeechSynthesisUtterance();
+msg.volume = 1; // 0 to 1
+msg.rate = 1; // 0.1 to 10
+msg.pitch = 1.5; // 0 to 2
+msg.text  = "Hello Epicop";
+
+
+const voice = speaks[35]; //47
+console.log(`Voice: ${voice.name} and Lang: ${voice.lang}`);
+msg.voiceURI = voice.name;
+msg.lang = voice.lang;
+
+
+speechSynthesis.speak(msg);
+
+
+
+
+
+
+
+
+
+
+// const msg = new SpeechSynthesisUtterance();
+// msg.volume = 1; // 0 to 1
+// msg.rate = 1; // 0.1 to 10
+// msg.pitch = 1; //0 to 2
+// msg.text = "Hello, world";
+
+// const voice = speaks[4] // 47 total
+// console.log(`voice: ${voice.name}, language: ${voice.lang}`)
+// msg.voiceURI = voice.name;
+// msg.lang = voice.lang;
+
+// speechSynthesis.speak(msg);
+
+</script>
+
+</body>
+</html>
